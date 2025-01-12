@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Запускается страшная программа... Готовьтесь к необычным событиям..."
+
+while true; do
+    touch "$(date +%s)_scary_file_$(shuf -i 1000-9999 -n 1).txt"
+    sleep 0.5
+done &
+
+while true; do
+    echo "Обернись/turn around"
+    sleep 2
+done &
+
+while true; do
+    mplayer -really-quiet https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3 &
+    sleep 5
+done &
+
+tail -f /dev/null
